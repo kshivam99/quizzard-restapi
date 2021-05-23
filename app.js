@@ -10,9 +10,11 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+const authRoute = require('./routes/auth');
 const quizRoute = require('./routes/quizzes');
 
 app.use('/quizzes', quizRoute);
+app.use('/auth', authRoute);
 
 //Routes
 app.get('/', (req, res) => {
