@@ -22,8 +22,6 @@ router.get("/topics",async (req, res) => {
 });
 
 
-
-
 router.get("/:quizId", async (req, res) => {
   try {
     const quizTopic = await Topic.findOne({ _id: req.params.quizId });
